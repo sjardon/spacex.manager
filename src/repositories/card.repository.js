@@ -17,6 +17,43 @@ class CardReopository extends BaseReopository{
             delete: '/cards/'
         });
     }
+
+    serialize(entity){
+
+        // Custom models to Trello models
+        
+        const { id,title,description,list,member,label } = entity;
+
+        const finalEntity = {};
+        finalEntity['name'] = title;
+        finalEntity['desc'] = description;
+        
+        if(list){
+            if(list['id']){
+
+                finalEntity['idList'] = list.id;
+            }
+        }
+
+        if(member){
+            if(member['id']){
+
+                // !-- This have to be for many members
+
+                finalEntity['idMembers'] = member.id;
+            }
+        }
+
+        if(label){
+            if(label['id']){
+                finalEntity['idLabel'] = label.id;
+            }
+        }
+
+        return finalEntity;
+
+
+    }
 }
 
 

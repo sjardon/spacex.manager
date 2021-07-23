@@ -58,7 +58,7 @@ class TrelloApiUtility{
         try{
 
             // !-- Add to retry if fail.
-            console.log(`${SRC}${this.endpoint}${query}`);
+
             const { data } = await axios.post(`${SRC}${this.endpoint}${query}`);
             
             return data;

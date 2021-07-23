@@ -12,12 +12,11 @@ class CardController {
 
         try{
             const { body: card } = req;
-
+            
             const result = await _cardService.create(card);
-
             return res.json(result);
         }catch(err){
-            return res.status(err.status).json(err);
+            return res.json(err);
         }
 
     }

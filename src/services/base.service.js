@@ -1,41 +1,66 @@
 const { TRELLO } = require('../../config');
 const axios = require('axios');
 
+
+
 class BaseService{
 
-    constructor(){
+    constructor(repository){
+        this.repository = new repository();
     }
 
     async get(id){
+
+        if(!id){
+            const err = new Error();
+            err.status = 400;
+            err.message = "The id has to be sent";
+            throw err;
+        }
+        
+        return await this.repository.get(id);
     }
     
     async getAll(){
+        
+        if(!id){
+            const err = new Error();
+            err.status = 400;
+            err.message = "The id has to be sent";
+            throw err;
+        }
+
+        return await this.repository.getAll(id);
     }
 
     async create(entity){
 
-    
-
-        try{
-
-            const { data: response } = await axios.get(`${TRELLO.SRC}/members/me/organizations?key=${TRELLO.API_KEY}&token=${TRELLO.TOKEN}`);
-            return response;
-        }catch(err){
-            console.log(err);
-            
-
-            err.status = 400;
-            throw err;
-
-        }
-
-
+        return await this.repository.create(entity);
     }
 
     async update(id,entity){
+
+        if(!id){
+            const err = new Error();
+            err.status = 400;
+            err.message = "The id has to be sent";
+            throw err;
+        }
+
+
+        return await this.repository.update(id,entity);
     }
 
     async delete(id){
+
+        if(!id){
+            const err = new Error();
+            err.status = 400;
+            err.message = "The id has to be sent";
+            throw err;
+        }
+
+        return await this.repository.delete(id);
     }
 }
 

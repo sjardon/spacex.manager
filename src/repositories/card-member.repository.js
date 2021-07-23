@@ -5,7 +5,7 @@ const BaseReopository = require("./base.repository");
 
 class CardMemberReopository extends BaseReopository{
     
-    constructor(idCard){
+    constructor(){
 
         // Endpoints
 

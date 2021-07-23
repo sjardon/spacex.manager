@@ -56,6 +56,10 @@ class BaseReopository{
             return false;
         }
 
+        if(this['serialize']){
+            entity = this.serialize(entity);
+        }
+
         try{
 
             const data = await trelloApiUtility
@@ -75,6 +79,10 @@ class BaseReopository{
 
         if(!this.endpoints['update']){
             return false;
+        }
+
+        if(this['serialize']){
+            entity = this.serialize(entity);
         }
 
         try{
