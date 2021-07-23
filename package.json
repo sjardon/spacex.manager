@@ -1,0 +1,33 @@
+{
+  "name": "sapacex.manager",
+  "version": "1.0.0",
+  "description": "Manager app for space-x team",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjardon/sapacex.manager.git"
+  },
+  "author": "Santiago Jardón",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sjardon/sapacex.manager/issues"
+  },
+  "homepage": "https://github.com/sjardon/sapacex.manager#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "joi": "^17.4.1",
+    "node-cache": "^5.1.2",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
