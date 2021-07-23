@@ -8,6 +8,30 @@ class CardController {
         _cardService = new CardService();
     }
 
+    async all(req,res){
+
+        try{
+            
+            const result = await _cardService.getAll();
+            return res.json(result);
+        }catch(err){
+            return res.json(err);
+        }
+    }
+
+    async show(req,res){
+
+        try{
+            const { card: cardId } = req.params;
+            
+            const result = await _cardService.get(cardId);
+
+            return res.json(result);
+        }catch(err){
+            return res.json(err);
+        }
+    }
+
     async create(req,res){
 
         try{

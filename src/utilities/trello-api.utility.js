@@ -37,8 +37,6 @@ class TrelloApiUtility{
         const query = this.getQuery();
 
         try{
-            
-            // !-- Add to retry if fail.
 
             const { data } = await axios.get(`${SRC}${this.endpoint}${query}`);
             
@@ -57,7 +55,7 @@ class TrelloApiUtility{
 
         try{
 
-            // !-- Add to retry if fail.
+            
 
             const { data } = await axios.post(`${SRC}${this.endpoint}${query}`);
             
@@ -77,7 +75,7 @@ class TrelloApiUtility{
 
         try{
             
-            // !-- Add to retry if fail.
+            
 
             const { data } = await axios.put(`${SRC}${this.endpoint}${query}`);
             
@@ -96,7 +94,7 @@ class TrelloApiUtility{
 
         try{
             
-            // !-- Add to retry if fail.
+            
 
             const { data } = await axios.delete(`${SRC}${this.endpoint}${query}`);
             

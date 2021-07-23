@@ -12,8 +12,6 @@ class BaseReopository{
     
     async get(id){
 
-        // !-- add errors
-
         if(!this.endpoints['get']){
             return false;
         }
