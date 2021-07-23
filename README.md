@@ -3,7 +3,7 @@
 Manager app for space-x team
 
 ## Init:
-- Check the correct configuration of .env file. 
+- Check the correct configuration of .env file: set TRELLO_API_KEY and TRELLO_TOKEN with your trello api_key and token. Anyway the current data should work and is from a test account.
 - For run width NodeJs: 
 
 ```
