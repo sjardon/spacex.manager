@@ -1,5 +1,7 @@
 # sapacex.manager
 
+This project was the challenge for NaN-Labs tech interview.
+
 Manager app for space-x team
 
 ## Init:
